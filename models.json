@@ -1,0 +1,60 @@
+{
+  "models": {
+    "qwen3-max": {
+      "provider": "bailian",
+      "model": "qwen3-max-2026-01-23",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "general_purpose, reasoning, analysis, daily_journal"
+    },
+    "qwen3.5-plus": {
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "multimodal_tasks, vision_understanding, image_analysis, visual_reasoning"
+    },
+    "glm-5": {
+      "provider": "zhipu",
+      "model": "glm-5",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "deep_reasoning, text_generation, complex_analysis"
+    },
+    "glm-4.7": {
+      "provider": "zhipu",
+      "model": "glm-4.7",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "deep_reasoning, text_generation, general_purpose"
+    },
+    "kimi-k2.5": {
+      "provider": "moonshot",
+      "model": "kimi-k2.5",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "multimodal_tasks, vision_understanding, image_analysis, text_generation"
+    },
+    "minimax-m2.5": {
+      "provider": "minimax",
+      "model": "MiniMax-M2.5",
+      "api_key": "sk-sp-d61a1305f8864272bbebf93189042b62",
+      "api_url": "https://coding.dashscope.aliyuncs.com/v1",
+      "use_case": "deep_reasoning, text_generation, conversation"
+    }
+  },
+  "routing_strategy": {
+    "vision_tasks": "qwen3.5-plus",
+    "image_analysis": "qwen3.5-plus",
+    "multimodal_analysis": "qwen3.5-plus",
+    "visual_reasoning": "kimi-k2.5",
+    "deep_reasoning_zhipu": "glm-5",
+    "general_reasoning_zhipu": "glm-4.7",
+    "deep_reasoning_minimax": "minimax-m2.5",
+    "general_purpose": "qwen3-max",
+    "reasoning": "qwen3-max",
+    "daily_journal": "qwen3-max",
+    "fallback": "qwen3-max"
+  },
+  "current_active_model": "qwen3-max-2026-01-23"
+}
